@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+    transition: background 0.5s ease; /* Smooth transition when background changes */
+}
+
+.page { display: none; padding: 20px; min-height: 100vh; box-sizing: border-box; }
+.active { display: block; }
+
+/* Buttons & Inputs */
+button { 
+    padding: 12px 24px; 
+    margin: 10px; 
+    font-size: 18px; 
+    cursor: pointer; 
+    border: none; 
+    border-radius: 8px;
+    background: #ff4081;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover { filter: brightness(1.1); transform: translateY(-2px); }
+
+input { 
+    padding: 10px; 
+    margin: 5px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.9); /* Makes inputs readable on photos */
+}
+
+/* Spinner Page */
+#bottleContainer {
+    width: 180px;
+    height: 180px;
+    margin: 30px auto;
+    position: relative;
+}
+
+#bottle {
+    width: 100%;
+    height: 100%;
+    transition: transform 3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+#selectedPlayer {
+    margin-top: 20px;
+    font-size: 26px;
+    color: #ff4081;
+    min-height: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    animation: popIn 0.5s ease-out;
+}
+
+/* Challenge Page Grid */
+#boxContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(240, 240, 240, 0.8); /* Semi-transparent background */
+    border-radius: 15px;
+    border: 2px solid #ddd;
+}
+
+.box { 
+    aspect-ratio: 1 / 1;
+    background: #444; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer; 
+    font-weight: bold; 
+    border-radius: 12px;
+    user-select: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+}
+
+.box.opened { 
+    background: #ff9800 !important; 
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255,152,0,0.4);
+    opacity: 1 !important;
+}
+
+.box.disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+#continueBtn {
+    display: none; 
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+/* --- THE BACKGROUNDS (APPLIED TO BODY) --- */
+
+body.single-mode {
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
+                url('picture/sPicture.png') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+body.match-mode {
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
+                url('picture/matchP.webp') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+/* Make headers pop against the background images */
+h1, h2, h3, #playerPageTitle {
+    background: rgba(255, 255, 255, 0.85);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}

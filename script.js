@@ -16,32 +16,26 @@ const singleChallenges = [
     "Say a joke", "Do a silly walk", "Make an animal sound"
 ];
 
-const adultChallenges = [
-"Give a deep, lingering kiss that lasts for a full minute",
-"Kiss them slowly from their jawline down to their collarbone",
-"Blindfold them and kiss them in three unexpected places",
-"Hold their face in your hands and give them a passionate 'movie' kiss",
-"Trace their lips with yours before leanining in for a full kiss",
-"Give a soft, playful bite to their bottom lip while kissing",
-"Sit on their lap and maintain a deep kiss for 30 seconds",
-"Whisper your most romantic fantasy while kissing their earlobe",
-"Kiss every inch of their neck slowly and gently",
-"Remove an item of their clothing while keeping eye contact",
-"Give a slow kiss trail starting from their wrist up to their shoulder",
-"Pull them close by the waist and give them a breathless kiss",
-"Let them choose exactly where they want your next ten kisses",
-"Use a silk scarf to lightly touch them between kisses",
-"Kiss their forehead, then their cheeks, and finally their lips",
-"Slowly undress each other while maintaining physical contact",
-"Run your fingers through their hair while giving a deep kiss",
-"Press your bodies together and slow dance without any music",
-"Give them a lingering kiss on the back of their neck",
-"Tell them one thing that always turns you on about them",
-"Hold a single kiss for as long as you both can breathe comfortably",
-"Kiss their palms and then pull their hands around your waist",
-"Describe how much you want them while kissing their shoulder",
-"Take turns leading a deep, rhythmic kiss for two minutes",
-"End the session with a long, silent hug and one final deep kiss"
+const adultChallenges =[
+  "Kiss from their jawline down to their collarbone in one unbroken line.",
+  "Run your fingers through their hair while pulling them into a deep kiss. Hold for 15 seconds.",
+  "Press your bodies together, slow-dance to a song only you can hear, and kiss them once at the top of each 'beat.'",
+  "Let them close their eyes. Kiss three places they didn't expect. They guess which three.",
+  "Kiss their earlobe, whisper one fantasy (one sentence max), then pull back and look them in the eyes.",
+  "A full 60-second kiss. Hands wherever they want. No talking after.",
+  "Take turns leading a rhythmic kiss — 30 seconds each, counting silently.",
+  "Pull them close by the waist, lift them slightly off the ground if you can, and kiss until one of you has to break for air.",
+  "A soft, playful bite on the bottom lip mid-kiss. They get to decide if that counts as a point or a strike.",
+  "Kiss their shoulder, then their neck, then their lips — in that order, no skipping.",
+  "They pick exactly where your next 5 kisses land. You can't ask where. You just go.",
+  "Remove one item of their clothing while maintaining unbroken eye contact. They do the same to you.",
+  "A kiss trail from their wrist up the inside of their arm to their shoulder — slow enough to feel.",
+  "They blindfold you. You kiss three places. You guess. One correct = a point.",
+  "Use a silk scarf (or any soft fabric) to trace their skin between kisses. Your call where.",
+  "Tell them one thing that always turns you on about them. Then kiss their shoulder while saying it.",
+  "Hold a single kiss as long as you both can breathe comfortably. No count. No cheating.",
+  "Kiss their palms, then pull their hands around your waist. Hold.",
+  "A slow, silent undress — one piece at a time, both of you, skin on skin the whole time."
 ];
 // Navigation
 function showPage(pageId) {

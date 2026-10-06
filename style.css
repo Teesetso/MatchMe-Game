@@ -303,13 +303,13 @@ select {
 
 body.single-mode {
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
-                url('picture/teamwork.jpg') no-repeat center center fixed !important;
+                url('./picture/teamwork.jpg') no-repeat center center fixed !important;
     background-size: cover !important;
 }
 
 body.match-mode {
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
-                url('picture/match.webp') no-repeat center center fixed !important;
+                url('./picture/match.webp') no-repeat center center fixed !important;
     background-size: cover !important;
 }
 

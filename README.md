@@ -4,6 +4,14 @@ MatchME is a child-friendly browser game for fun group activities at schools, yo
 
 > **Have fun and be kind!** Players should only complete challenges they feel comfortable with. A challenge can always be skipped.
 
+## Play online
+
+Open the live game here:
+
+<https://teesetso.github.io/MatchMe-Game/>
+
+Use the GitHub Pages link above to play the game. The repository link displays the project files and is not the game itself.
+
 ## Game modes
 
 ### Single Mode

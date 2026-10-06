@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spin the Bottle Game</title>
+    <title>MatchME Fun Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="confetti" aria-hidden="true"></div>
 
 <div id="startPage" class="page active">
-    <h1>Welcome to <b>MatchME</b> Spin the Bottle!</h1><br>
+    <h1>Welcome to <b>MatchME</b> Fun Game!</h1><br>
+    <div class="safety-card">
+        <strong>Have fun and be kind!</strong>
+        <p>Only do challenges that feel comfortable. You can always skip a challenge.</p>
+    </div>
     <button onclick="showPage('modePage')">Start Game</button>
 </div>
 
@@ -29,15 +34,20 @@
 </div>
 
 <div id="spinnerPage" class="page">
-    <h2>Who will be selected?</h2>
+    <h2 id="spinnerTitle">Who will be selected?</h2>
+    <div id="scoreboard" class="scoreboard"></div>
     
-    <div id="bottleContainer">
-        <img src="picture/bottle.png" id="bottle" alt="Bottle">
+    <div id="namePicker" aria-live="polite">
+        <div class="picker-stars">✨ ⭐ ✨</div>
+        <div id="rollingName">Ready?</div>
+        <div class="picker-stars">🌈 🎉 🌈</div>
     </div>
     
     <button onclick="spin()">Spin!</button>
+    <button id="soundToggle" onclick="toggleSound()" style="background: #28a745;">🔊 Sound On</button>
     
     <h3 id="selectedPlayer"></h3>
+    <p id="selectedRepresentative" class="selected-representative"></p>
     
     <button id="openBoxBtn" onclick="setupChallenges()" style="display:none;">Open a Challenge Box!</button>
     
@@ -46,16 +56,40 @@
 </div>
 
 <div id="challengePage" class="page">
-    <h2>Choose your fate!</h2>
-    <p>Click only one box to reveal your challenge.</p>
+    <h2 id="challengeTitle">Choose a Fun Challenge!</h2>
+    <p id="challengeInstructions">Pick one box. Remember: you can always skip.</p>
+    <p id="judgeInstructions" class="judge-instructions"></p>
+    <div id="roundLabel" class="round-label"></div>
+    <label for="challengeCategory">Challenge type:</label>
+    <select id="challengeCategory">
+        <option value="all">Everything</option>
+        <option value="funny">Funny</option>
+        <option value="movement">Movement</option>
+        <option value="creative">Creative</option>
+        <option value="teamwork">Teamwork</option>
+    </select>
     
     <div id="boxContainer"></div>
+    <div id="challengeResult" class="challenge-result" aria-live="polite"></div>
+    <div id="challengeTimer" class="challenge-timer" aria-live="polite"></div>
+    <div id="challengeActions" class="challenge-actions">
+        <button id="singleCompleteButton" onclick="completeChallenge()" class="success-button">I Did It! 🌟</button>
+        <button id="team1PointButton" onclick="recordMatchResult('team1')" class="team1-button">Award Point</button>
+        <button id="team2PointButton" onclick="recordMatchResult('team2')" class="team2-button">Award Point</button>
+        <button id="bothPointButton" onclick="recordMatchResult('both')" class="success-button">Award Both a Point</button>
+        <button onclick="skipChallenge()" class="secondary-button">No Point / Skip</button>
+        <button id="tryAnotherButton" onclick="tryAnotherChallenge()" class="secondary-button">Try Another</button>
+    </div>
     
     <button id="continueBtn" onclick="nextRound()" style="display:none;">Continue to Next Round</button>
 </div>
 
-<audio id="spinSound" src="spin.mp3"></audio>
-<audio id="boxSound" src="box.mp3"></audio>
+<div id="finalPage" class="page">
+    <h2>Final Score</h2>
+    <div id="finalScore" class="final-score"></div>
+    <div id="winnerText" class="winner-text"></div>
+    <button onclick="resetToHome()">Play Again</button>
+</div>
 
 <script src="script.js"></script>
 </body>
